@@ -89,8 +89,10 @@ function sumAndAmount() {
 
 // Проверить простое ли число?
 function justNumber(a) {
+    if (isNaN(a) ||  a==0) {
+        return false;}
     var timesDiv = 0;
-    for (i = 2; i < a; i++) {
+    for (i = 2; i <Math.abs(a); i++) {
         if (a % i == 0)
             timesDiv++;
     }
@@ -102,12 +104,18 @@ function justNumber(a) {
 
 //Найти корень натурального числа с точностью до целого
 function sqRound(a) {
-
+    if (isNaN(a) ||  a<=0) {
+        return false;}
     return Math.round(Math.sqrt(a));
 }
 
 //Вычислить факториал числа n.
 function factorial(a) {
+    if(a==0){
+        return 0;
+    }
+    if (isNaN(a)||a<0) {
+        return false;}
     var fac = 1;
     for (i = 1; i <= a; i++) {
         fac = fac * i;
