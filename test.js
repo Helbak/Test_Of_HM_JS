@@ -392,81 +392,56 @@ describe("tets  factorial(a) ", () => {
 
 
 });
-    // const mock1 = [0, 5, 10, 100, 1000, 10500];
-    // const mock2 = [0, 5, 10, 100, 1000, 10500];
-    //
-    // for (let i = 0; i < mock1.length-1; i++) {
-    //
-    //     const value1 = mock1[i];
-    //     const value2 = mock2[i];
-    //
-    //     it(`test value ${value1} value2 ${value2}`, function () {
-    //         const act = calculate(value1, value2);
-    //         const exp = value1 + value2;
-    //
-    //         assert.equal(act, exp);
-    //     });
-    // }
-    //
-    // it('test value -1, and 5', function () {
-    //     const act = calculate(-1, 5);
-    //     const exp = false;
-    //
-    //     assert.isFalse(act);
-    // });
-    //
-    // it('test value 1, and 10501', function () {
-    //     const act = calculate(1, 10501);
-    //
-    //
-    //     assert.isFalse(act);
-    // });
-    // it('test first arg NaN',  () => {
-    //     const act = calculate("test", 5);
-    //
-    //
-    //     assert.isFalse(act);
-    // });
-    //
-    // it('test first arg NaN',  () => {
-    //     const act = calculate(4, "test");
-    //
-    //
-    //     assert.isFalse(act);
-    // });
-    //
-    // it('test first arg NaN',  () => {
-    //     const act = calculate("test", "test");
-    //
-    //
-    //     assert.isFalse(act);
-    // });
-    //
-    // it('test first & second undefind', () => {
-    //     const act = calculate();
-    //
-    //     assert.isFalse(act);
-    // })
-    // it('test sum > 999999', function () {
-    //     const act = calculate(999999, 1);
-    //     const exp = false;
-    //
-    //     assert.isFalse(act);
-    // });
+
+describe("tests  sumOfSign(a) ", () => {
+    it(`test sumOfSign(3)`, function () {
+        const act = sumOfSign(3);
+        const exp = 3;
+        assert.equal(act,exp);
+    });
+    it(`test sumOfSign(333)`, function () {
+        const act = sumOfSign(333);
+        const exp = 9;
+        assert.equal(act,exp);
+    });
+    it(`test sumOfSign(-333)`, function () {
+        const act = sumOfSign(-333);
+        const exp = false;
+        assert.equal(act,exp);
+    });
+    it(`test sumOfSign(0)`, function () {
+        const act = sumOfSign(0);
+        const exp = 0;
+        assert.equal(act,exp);
+    });
+    it(`test sumOfSign(-1)`, function () {
+        const act = sumOfSign(-1);
+        const exp = false;
+        assert.equal(act,exp);
+    });
+});
+
+describe("tests  mirror(a) ", () => {
+    it(`test sumOfSign(12345)`, function () {
+        const act = mirror(12345);
+        const exp = 54321;
+        assert.equal(act,exp);
+    });
+    it(`test sumOfSign(0)`, function () {
+        const act = mirror(0);
+        const exp = 0;
+        assert.equal(act,exp);
+    });
+    it(`test sumOfSign(-1)`, function () {
+        const act = mirror(-1);
+        const exp = false;
+        assert.equal(act,exp);
+    });
+    it(`test sumOfSign("test")`, function () {
+        const act = mirror("test");
+        const exp = false;
+        assert.equal(act,exp);
+    });
 
 
-
-
-
-
-// describe("multi tests", () => {
-//     it(`test value 4 and 2`, function () {
-//         const act = divide(4, 2);
-//         const exp = 8;
-//         assert.equal(act,exp);
-//     });
-//
-//
-//
-// });
-
+});

@@ -125,6 +125,8 @@ function factorial(a) {
 
 //Посчитать сумму цифр заданного числа
 function sumOfSign(a) {
+    if (isNaN(a)||a<0) {
+        return false;}
     var sum = 0;
     output = [];
     aString = a.toString();
@@ -143,9 +145,14 @@ function sumOfSign(a) {
 //Вывести число, которое является зеркальным отображением последовательности
 // цифр заданного числа
 function mirror(a) {
+    if (isNaN(a)||a<0) {
+        return false;}
     output = [];
     aString = a.toString();
     var res = "";
+    if(aString.length>5){
+        return false;
+    }
     for (var i = 0; i < aString.length; i++) {
         output.push(aString.charAt(i));
     }
