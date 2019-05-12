@@ -145,7 +145,8 @@ function sumOfSign(a) {
 //Вывести число, которое является зеркальным отображением последовательности
 // цифр заданного числа
 function mirror(a) {
-    if (isNaN(a)||a<0) {
+
+    if (isNaN(a)||a < 0) {
         return false;}
     output = [];
     aString = a.toString();
@@ -166,6 +167,19 @@ function mirror(a) {
 
 // Найти минимальный элемент массива
 function minFromArray(array) {
+
+    if(array.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
     var min = array[0];
     for (i = 1; i < array.length; i++) {
         if (array[i] < min)
@@ -176,6 +190,18 @@ function minFromArray(array) {
 
 // Найти максимальный элемент массива
 function maxFromArray(array) {
+    if(array.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
     var max = array[0];
     for (var i = 1; i < array.length; i++) {
         if (array[i] > max)
@@ -186,6 +212,18 @@ function maxFromArray(array) {
 
 // 3. Найти индекс минимального элемента массива
 function indexOfMinFromArray(array) {
+    if(array.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
     var min = array[0];
     var indexMin = 0;
     for (i = 0; i < array.length; i++) {
@@ -199,6 +237,18 @@ function indexOfMinFromArray(array) {
 
 // 4. Найти индекс максимального элемента массива
 function indexOfMaxFromArray(array) {
+    if(array.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
     var max = array[0];
     var indexMax = 0;
     for (i = 1; i < array.length; i++) {
@@ -212,6 +262,18 @@ function indexOfMaxFromArray(array) {
 
 // 5. Посчитать сумму элементов массива с нечетными индексами
 function sumOfUneven(array2) {
+    if(array2.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array2.length;i++){
+        if(array2[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array2.length){
+        return false;
+    }
     var uneven = 0;
     for (i = 1; i < array2.length; i = i + 2) {
         uneven = uneven + array2[i];
@@ -221,15 +283,40 @@ function sumOfUneven(array2) {
 
 // 6. Сделать реверс массива (массив в обратном направлении)
 function reversArray(array) {
-    rev = [];
-    for (i = 0; i < array.length; i++) {
-        rev[array.length - i] = array[i];
+    if(array.length==0){
+        return false;
     }
-    return rev[rev.length - 1];
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
+    rev = [];
+    for (let i = 0; i < array.length; i++) {
+        rev[i] = array[array.length-i-1];
+    }
+
+    return rev;
 }
 
 // 7. Посчитать количество нечетных элементов массива
 function uneven(array) {
+    if(array.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
     var amount = 0;
     for (i = 0; i < array.length; i++) {
         if (array[i] % 2 != 0)
@@ -241,6 +328,9 @@ function uneven(array) {
 // 8. Поменять местами первую и вторую половину массива, например, для массива 1 2 3
 // 4, результат 3 4 1 2
 function changeHalfs(array) {
+    if(array.length==0 || array.length%2!=0){
+        return false;
+    }
     changedAr = [];
     for (i = array.length / 2; i < array.length; i++) {
         changedAr.push(array[i]);
@@ -257,6 +347,18 @@ function changeHalfs(array) {
 
 // 9. Отсортировать массив (пузырьком (Bubble),  вставками (Insert))
 function sortBubble(array) {
+    if(array.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
     for (i = 0; i < array.length - 1; i++) {
         for (j = 0; j < array.length; j++) {
             if (array[j] > array[j + 1]) {
@@ -272,6 +374,18 @@ function sortBubble(array) {
 // 9. Отсортировать массив  выбором (Select)
 
 function sortSelection(array) {
+    if(array.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
     for (i = 0; i < array.length - 1; i++) {
         var min = i;
         for (var j = i + 1; j < array.length; j++) {
@@ -288,6 +402,18 @@ function sortSelection(array) {
 // 9. Отсортировать массив вставками (Insert))
 
 function sortInsert(array) {
+    if(array.length==0){
+        return false;
+    }
+    let count=0;
+    for(let i =0; i<array.length;i++){
+        if(array[i]/0==Infinity){
+            count++;
+        }
+    }
+    if(count!=array.length){
+        return false;
+    }
     for (i = 1; i > array.length; i++) {
         var temp = array[i];
         var j = i;
@@ -304,12 +430,17 @@ function sortInsert(array) {
 
 // Получить строковое название дня недели по номеру дня.
 function dayOfWeek(dayIndex) {
-    return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][dayIndex];
+    if (dayIndex < 0 ||  isNaN(dayIndex) ||dayIndex>6){
+        return false;
+    }
+    return ["Monday", "Tuesday","Wednesday" , "Thursday", "Friday", "Saturday", "Sunday"][dayIndex];
 }
 
 // 2. Вводим число (0-999), получаем строку с прописью числа.
 function numberToWord(a) {
-
+    if (a <= 0 ||  isNaN(a) ||a>999){
+        return false;
+    }
     var word = String(a);
     var wordArr = word.split('');
     var oneArr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
@@ -349,6 +480,9 @@ function numberToWord(a) {
 // 3. Вводим строку, которая содержит число, написанное прописью (0-999). Получить само
 // число
 function wordToNumber(word) {
+    if(word!=String(word)||word/0==Infinity){
+        return false;
+    }
     var wordArr = word.split(' ');
     var oneArr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     var twoArr = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
@@ -368,6 +502,7 @@ function wordToNumber(word) {
             if (threeArr[i] == wordArr[0])
                 return (i + 2) * 10;
         }
+        return false;
     }
     if (wordArr.length == 2 && wordArr[1] == 'hundred') {
         for (i = 0; i < oneArr.length; i++) {
@@ -443,10 +578,14 @@ function wordToNumber(word) {
             }
         }
     }
+    return false;
 }
 
 // 4. Найти расстояние между двумя точками в двумерном декартовом пространстве.
 function distance(xa, ya, xb, yb) {
+    if (isNaN(xa) || isNaN(ya) || isNaN(xb) || isNaN(yb)) {
+        return false;
+    }
     var dist = Math.sqrt(Math.pow((xb - xa), 2) + Math.pow((yb - ya), 2));
     return dist;
 }
